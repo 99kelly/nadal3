@@ -6,6 +6,42 @@
     box-sizing: border-box;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(37, 38, 47, 0.615);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(186, 186, 227);
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 750px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster-modal {
+    width: 300px auto;
+}
+
 html {
     font-family: "Roboto", serif;
     color: #151515;
@@ -31,7 +67,6 @@ html {
 
 .movie-poster-container {
     position: relative;
-    
 }
 
 .movie-poster-container img {
@@ -39,6 +74,7 @@ html {
     height: 500px;
     border-radius: 10px;
     transition: all 1s;
+    cursor: pointer;
 }
 
 .movie-poster-container img:hover {
